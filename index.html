@@ -30,6 +30,7 @@
 </head>
 
 <body>
+  <div class="alan-btn"></div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -249,7 +250,25 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
 
+<script>
+ var alanBtnInstance = alanBtn({
+   key: "4a2074663d95a216b33c04cbb5f5074a2e956eca572e1d8b807a3e2338fdd0dc/stage",
+   onCommand: function (commandData) {
+
+     if (commandData.command === "code") 
+     {
+        window.location.href="https://collab-ide-rho.vercel.app/"
+     }
+     if (commandData.command === "contest") 
+     {
+        window.location.href="#upcomingevents"
+     }
+   },
+   rootEl: document.getElementById("alan-btn"),
+ });
+</script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
